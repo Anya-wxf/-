@@ -1,4 +1,3 @@
-```python
 def quick_sort(arr):
     if len(arr) <= 1:
         return arr
@@ -7,5 +6,9 @@ def quick_sort(arr):
     middle = [x for x in arr if x == pivot]
     right = [x for x in arr if x > pivot]
     return quick_sort(left) + middle + quick_sort(right)
-```
-//Выбираешь опорный элемент, делишь массив и сортируешь рекурсивно.
+
+//Пример использования
+arr = [3, 6, 8, 10, 1, 2, 1]
+sorted_arr = quick_sort(arr)
+print("Отсортированный массив:", sorted_arr)
+//Алгоритм выбирает опорный элемент (pivot) и разбивает массив на три части: элементы меньше опорного, равные ему и больше него. Затем рекурсивно сортирует полученные подмассивы. Сложность O(n log n) в среднем случае.
