@@ -1,0 +1,12 @@
+```python
+import heapq
+
+def heap_sort(arr):
+    heapq.heapify(arr)
+    sorted_arr = []
+    while arr:
+        smallest = heapq.heappop(arr)
+        sorted_arr.append(smallest)
+    return sorted_arr
+```
+//Построение кучи, извлечение минимума — всё автоматизировано, и результат — отсортированный массив.
